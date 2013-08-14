@@ -85,8 +85,12 @@ $(function() {
             })                
         })
         var ri = randomIndex(1 * o.recenttracks['@attr'].totalPages - 1) + 1
-        loadTracks(p2, d2, ri)
+        loadTracks(p2, d2, ri);
         // known bug: this might get added first, but we don't care too much 
-        loadTracks(p2, d2, ri + 1)
-    })
+        loadTracks(p2, d2, ri + 1);
+    });
+
+    setTimeout(function() {
+        location.reload();
+    }, 20*60*1000);
 });
